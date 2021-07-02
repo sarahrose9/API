@@ -1,21 +1,9 @@
-const Task=require("./DbDao")
+const Task=require("./DbDao");
 
-exports.find=(req,res)=>{
-    Task.find().then(task=>res.json(task))}
+exports.findAll=()=>{return Task};
 
-exports.add=(req,res)=>{
-    const newTask = new Task({
-        title: req.body.title
-    })
-    newTask.save().then(task=>res.json(task))
-}
+exports.add=()=>{return Task};
 
-exports.delete=(req,res)=>{
-    Task.findByIdAndDelete(req.params.id)
-    .then(()=>res.json({remove:true}))
-}
+exports.delete=()=>{return Task};
 
-exports.deleteall=(req,res)=>{
-    Task.remove()
-    .then(()=>res.json({remove:true}))
-}
+exports.deleteall=()=>{return Task};

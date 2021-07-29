@@ -1,6 +1,6 @@
-const Task=require("./DbDao")
+//const Task=require("./DbDao")
 
-exports.find=(req,res)=>{
+/*exports.find=(req,res)=>{
     Task.find().then(task=>res.json(task))}
 
 exports.add=(req,res)=>{
@@ -18,4 +18,4 @@ exports.delete=(req,res)=>{
 exports.deleteall=(req,res)=>{
     Task.remove()
     .then(()=>res.json({remove:true}))
-}
+}*/
